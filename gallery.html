@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+  
+  @keyframes jump {
+    0% {
+      transform: translateX(0px);
+      padding-left: 100px;
+    }
+    25% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  img{
+    max-width: 100%;
+  }
+  .gallery{
+    padding: 30px 0px;
+  }
+  .gallery img{
+    padding: 15px;
+    width: 100%;
+    /* box-shadow: 0 0 5px rgba(243, 236, 236, 0.3); */
+    border-radius: 30px;
+    cursor: pointer;
+    height: 500px;
+  }
+  #gallery-modal .modal-img{
+    width: 100%;
+  }
+
+  .nav-link{
+    color: white !important;
+    font-size: 20px;
+  }
+  .nav-link:hover{
+    color: rgba(241, 79, 43, 0.978) !important;
+    transition: all 0.5s;
+    
+  }
+  
+  .navbar-brand{
+    color: white !important;
+    font-size: 20px;
+    border-left: 1px solid rgba(241, 79, 43, 0.978);
+    border-right: 1px solid rgba(241, 79, 43, 0.978);
+    padding: 15px;
+    border-radius: 20px;
+
+  }
+  
+ 
+ footer a{
+  text-decoration: none;
+  color: #fdffff;
+ }
+ footer a:hover{
+  color: rgba(241, 79, 43, 0.978) !important;
+  transition: all 0.4s;
+  text-decoration: underline;
+ }
+
+
+.btn:hover{
+  background-color: rgb(1, 19, 19);
+  transition: all .5s;
+}
+.carousel img{
+  height: 500px;
+  width: 100%;
+}
+#search{
+  border: none !important;
+  border-radius: 10px !important;
+  width: 100%;
+}
+.upload:hover{
+  border:1px solid white !important;
+  transition: all .5s;
+}
+
+</style>
+<body>
+  <div class="container-fluid" style="background: url(https://th.bing.com/th/id/OIP.Ye-keaqaPBa8onL_DJlErQHaEo?pid=ImgDet&rs=1) no-repeat; background-size: cover; height: 500px;">
+
+  <nav class="navbar navbar-expand-lg navbar-light py-4">
+    <a class="navbar-brand" href="#">AD Gallery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="active nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Explore</a>
+        </li>
+        <li class="nav-item upload" style="border: 1px solid rgba(241, 79, 43, 0.978);">
+          <a class="nav-link" href="#">Upload</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container d-flex flex-column justify-content-center align-items-center text-white">
+  <div class="row mt-3 d-flex flex-column justify-content-center align-items-center">
+    <div class="col-lg-8 mt-3 my-5">
+      <h2>The best free Photos And free Images shared by Creators.</h2>
+      
+      <div class="input-group mt-5 flex-nowrap d-flex flex-row justify-content-center align-items-center">
+        <!-- <i class="fab fa-linkedin" style="margin-left: 10px;"></i> -->
+        <input type="text" class="form-control" placeholder="Search for Free Photos" aria-label="Username" aria-describedby="addon-wrapping" style="height: 50px;">
+        <i class="input-group-text fa fa-search align-selft-center" id="addon-wrapping" style="cursor: pointer; padding: 16px;"></i>
+      </div>
+
+    </div>
+  </div>
+</div>
+      
+  </div>
+  
+
+<!-- Carousel -->
+      <!-- Images -->
+  <!-- Images -->
+<!-- Images -->
+<section class="gallery">
+        <h1 class="text-center py-3">Popular Photos and Images</h1>
+
+    <div class="container-lg">
+      <div class="row row-cols-lg-2 row-cols-sm-2 row-cols-md-3" id="images">
+        <div class="col">
+             
+                <div class="card text-bg-dark" style="border: none !important;">
+                  <img src="https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=400" class="card-img" alt="...">
+                  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+                    <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+                  </div>
+                </div>
+              
+            
+      </div>
+      <div class="col">
+        <div class="card text-bg-dark" style="border: none !important;">
+          <img src="https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
+          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+            <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+      
+
+    </div>
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/3641974/pexels-photo-3641974.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/358457/pexels-photo-358457.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/47334/meadow-grass-palm-tree-forest-plenty-of-natural-light-47334.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col">
+      <div class="card text-bg-dark" style="border: none !important;">
+        <img src="https://images.pexels.com/photos/6875119/pexels-photo-6875119.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+</section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://th.bing.com/th/id/OIP.nUyDVG8ATakOZjGumcKVQgHaF7?w=199&h=180&c=7&r=0&o=5&pid=1.7" class="modal-img" alt="...">
+            </div>
+          
+          </div>
+        </div>
+      </div>
+        <!-- fluid ends here -->
+        <div class="container d-flex justify-content-center align-content-center">
+          <div class="row">
+            <div class="col-12">
+              <button class="btn btn-dark mb-5" id="add-image" style="width: 400px;">Add Image</button>
+            </div>
+          </div>
+        </div>
+
+      <!-- footer -->
+      <footer class="bg-dark">
+        <div class="container-fluid bg-gradient" style="height: auto;">
+            <div class="row p-2 d-flex flex-row justify-content-center align-items-center">
+                <div class="col-md-3 px-3 mb-5 mt-3 d-flex flex-column justify-content-center align-items-start">
+                    <a href="#">About US</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Premium Content</a>
+                    <a href="#">Help</a>
+                </div>
+                <div class="col-md-3 px-3 mb-5 mt-3 d-flex flex-column justify-content-center align-items-start">
+                  <a href="#">About US</a>
+                  <a href="#">Contact Us</a>
+                  <a href="#">Premium Content</a>
+                  <a href="#">Help</a>
+              </div>
+                
+            <div class="col-md-6 mt-3">
+              <div class="form-control py-3 d-flex flex-column justify-content-center align-items-start" style="width: 100%;">
+
+                <input type="email" class="form-control" name="email" id="email" placeholder="JohnDoe@example.com" required>
+                <!-- <label for="text">Email</label> -->
+                <textarea class="form-control mt-2" rows="2" placeholder="Leave Your Feedback Here"></textarea>
+                <button class="btn btn-dark my-2" type="submit" id="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+      <script>
+const button = document.getElementById("add-image")
+
+button.onclick = function() {
+  // Get a random image from an online image website.
+  var imageUrl = "https://picsum.photos/200/300?random=" + Math.random();
+
+
+  var div = document.createElement("div");
+  div.className = "image-container";
+
+  // Create an image element and set its src attribute to the random image URL.
+  var img = document.createElement("div");
+  img.src = imageUrl;
+  img.innerHTML = `<div class="card text-bg-dark" style="border: none !important;">
+        <img src="${imageUrl}" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
+          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+
+        </div>
+      </div>`;
+
+  div.appendChild(img);
+
+
+  document.querySelector("#images").appendChild(div);
+}
+
+// Add a button to the document body that calls the addRandomImage() function when clicked.
+
+
+
+
+
+          let header = document.querySelector(".navbar-brand");
+          setTimeout(function animate() {
+            header.style.animation = "jump 3s";
+          },1000);
+          window.onload = animate;
+
+
+      </script>
+</body>
+</html>
+
+<!-- user offline bootstrap -->
+<!-- script src = "js/bootstrap" -->
