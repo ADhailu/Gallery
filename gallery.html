@@ -30,7 +30,7 @@
     max-width: 100%;
   }
   .gallery{
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
   .gallery img{
     padding: 15px;
@@ -98,33 +98,52 @@
 <body>
   <div class="container-fluid" style="background: url(https://th.bing.com/th/id/OIP.Ye-keaqaPBa8onL_DJlErQHaEo?pid=ImgDet&rs=1) no-repeat; background-size: cover; height: 500px;">
 
-  <nav class="navbar navbar-expand-lg navbar-light py-4">
-    <a class="navbar-brand" href="#">AD Gallery</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="active nav-link" href="#">Home</a>
-        </li>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AD Gallery</a>
+      <button class="navbar-toggler bg-light"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+        </ul>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Explore</a>
-        </li>
-        <li class="nav-item upload" style="border: 1px solid rgba(241, 79, 43, 0.978);">
-          <a class="nav-link" href="#">Upload</a>
-        </li>
-      </ul>
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Feature</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explore
+              </a>
+              <ul class="dropdown-menu" style="background: transparent;">
+                <li><a class="dropdown-item" href="#">Images</a></li>
+                <li><a class="dropdown-item" href="#">Photos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Videos coming Soon</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="border: 1px solid #fdffff;">Upload</a>
+            </li>
+  
+          </ul>
+          
+        </form>
+      </div>
     </div>
   </nav>
 
+
 <div class="container d-flex flex-column justify-content-center align-items-center text-white">
   <div class="row mt-3 d-flex flex-column justify-content-center align-items-center">
-    <div class="col-lg-8 mt-3 my-5">
+    <div class="col-lg-8 mt-3 mt-md-5 my-5">
       <h2>The best free Photos And free Images shared by Creators.</h2>
       
       <div class="input-group mt-5 flex-nowrap d-flex flex-row justify-content-center align-items-center">
@@ -144,50 +163,50 @@
       <!-- Images -->
   <!-- Images -->
 <!-- Images -->
+
 <section class="gallery">
         <h1 class="text-center py-3">Popular Photos and Images</h1>
 
     <div class="container-lg">
-      <div class="row row-cols-lg-2 row-cols-sm-2 row-cols-md-3" id="images">
-        <div class="col">
+      <div class="row" id="images">
+        <div class="col-md-6 col-lg-4">
              
                 <div class="card text-bg-dark" style="border: none !important;">
                   <img src="https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=400" class="card-img" alt="...">
                   <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-                    <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+                    <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
                   </div>
                 </div>
               
-            
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg-4">
         <div class="card text-bg-dark" style="border: none !important;">
           <img src="https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
           <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-            <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+            <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
           </div>
         </div>
       
     </div>
 
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
       
 
     </div>
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
@@ -195,54 +214,54 @@
       
     </div>
 
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=400"  alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
 
     </div>
 
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/3641974/pexels-photo-3641974.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
 
     </div>
 
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/358457/pexels-photo-358457.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
 
     </div>
 
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/47334/meadow-grass-palm-tree-forest-plenty-of-natural-light-47334.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
 
     </div>
-    <div class="col">
+    <div class="col-md-6 col-lg-4">
       <div class="card text-bg-dark" style="border: none !important;">
         <img src="https://images.pexels.com/photos/6875119/pexels-photo-6875119.jpeg?auto=compress&cs=tinysrgb&w=400" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>
@@ -287,10 +306,10 @@
                     <a href="#">Help</a>
                 </div>
                 <div class="col-md-3 px-3 mb-5 mt-3 d-flex flex-column justify-content-center align-items-start">
-                  <a href="#">About US</a>
-                  <a href="#">Contact Us</a>
-                  <a href="#">Premium Content</a>
-                  <a href="#">Help</a>
+                  <h2 href="#">Follow US</h2>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-telegram"></i></a>
               </div>
                 
             <div class="col-md-6 mt-3">
@@ -316,24 +335,23 @@ button.onclick = function() {
   var imageUrl = "https://picsum.photos/200/300?random=" + Math.random();
 
 
-  var div = document.createElement("div");
-  div.className = "image-container";
 
   // Create an image element and set its src attribute to the random image URL.
   var img = document.createElement("div");
   img.src = imageUrl;
+  img.classList.add('col-md-6','col-lg-4');
   img.innerHTML = `<div class="card text-bg-dark" style="border: none !important;">
         <img src="${imageUrl}" alt="...">
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center" >
-          <button class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;">Download</butt>
+          <a class="btn my-2" download="image.jpeg" style="position:absolute;bottom:0; color: white;"><i class="fas fa-download"></i></a>
 
         </div>
       </div>`;
 
-  div.appendChild(img);
 
 
-  document.querySelector("#images").appendChild(div);
+
+  document.querySelector("#images").appendChild(img);
 }
 
 // Add a button to the document body that calls the addRandomImage() function when clicked.
