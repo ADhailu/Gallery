@@ -5,80 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Glass UI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Note: Font Awesome is not used in this design, so I've removed it for cleaner code -->
+    <link rel="stylesheet" href="signIn.css"
 </head>
 <body>
-   <style>
-    body {
-        /*
-        IMPROVEMENT: Using a pseudo-element for an overlay.
-        This darkens the background image, making text and the card much easier to read.
-        */
-        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKLXgJ_og4gfO5XS-WEpTY0i2_n6vwuVB_hw&usqp=CAU) no-repeat center center fixed;
-        background-size: cover;
-        font-family: 'Segoe UI', sans-serif;
-        height: 100vh;
-        position: relative;
-    }
-
-    body::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: -1;
-    }
-
-    /*
-    IMPROVEMENT: "Glassmorphism" UI effect.
-    This creates a modern, frosted-glass look for the login card.
-    */
-    .glass-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        color: white;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    /* IMPROVEMENT: Styling form inputs for the dark theme */
-    .form-control {
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: white;
-    }
-
-    .form-control::placeholder {
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    .form-control:focus {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border-color: rgba(255, 255, 255, 0.5);
-        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25); /* Custom focus ring */
-    }
-
-    .card-footer a {
-        color: #0d6efd; /* Bootstrap's primary blue */
-        text-decoration: none;
-    }
-    .card-footer a:hover {
-        text-decoration: underline;
-    }
-   </style>
-
    <div class="container d-flex justify-content-center align-items-center vh-100">
     
-    <!--
-      IMPROVEMENT: Using a proper <form> element.
-      This is crucial for semantics, accessibility, and functionality (like submitting with Enter key).
-    -->
+
     <form id="loginForm" class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card glass-card p-4">
             <div class="card-body text-center">
@@ -86,14 +18,10 @@
                     <h2 class="fw-bold mb-2 text-uppercase">Sign In</h2>
                     <p class="text-white-50 mb-5">Please enter your email and password!</p>
 
-                    <!-- IMPROVEMENT: Added a div for alerts for better control -->
                     <div id="alert-box" role="alert"></div>
 
                     <div class="form-outline form-white mb-4">
-                        <!--
-                          IMPROVEMENT: Added a <label> for accessibility.
-                          The 'visually-hidden' class hides it from view but keeps it for screen readers.
-                        -->
+        
                         <label class="form-label visually-hidden" for="email">Email</label>
                         <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" />
                     </div>
@@ -103,10 +31,6 @@
                         <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" />
                     </div>
 
-                    <!--
-                      IMPROVEMENT: Using a <button type="submit"> instead of an <a> tag.
-                      This is the correct element for form submission. d-grid makes it full-width.
-                    -->
                     <div class="d-grid">
                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign In</button>
                     </div>
@@ -121,16 +45,12 @@
    </div>
 
    <script>
-    // IMPROVEMENT: Wait for the DOM to be fully loaded before running script.
     document.addEventListener("DOMContentLoaded", function() {
         
-        // IMPROVEMENT: Use 'const' for variables that won't be reassigned.
         const loginForm = document.getElementById("loginForm");
         const alertBox = document.getElementById("alert-box");
 
-        // IMPROVEMENT: Use the 'submit' event on the form, which is more robust.
         loginForm.addEventListener("submit", function(event) {
-            // IMPROVEMENT: ALWAYS prevent the default form submission to handle it with JS.
             event.preventDefault();
 
             const email = document.getElementById("email").value.trim();
@@ -139,7 +59,6 @@
             // Clear previous alerts
             alertBox.innerHTML = '';
 
-            // IMPROVEMENT: More specific validation and clearer feedback.
             if (email === "" && password === "") {
                 showAlert("Please enter your email and password.", "danger");
             } else if (email === "") {
@@ -148,17 +67,14 @@
                 showAlert("Please enter your password.", "danger");
             } else {
                 // If validation passes, show a success message.
-                // In a real application, you would send the data to a server here.
                 showAlert("Login successful! Redirecting...", "success");
                 
-                // Simulate a redirect after 2 seconds
                 setTimeout(() => {
-                    window.location.href = "gallery.html"; // Or your desired page
+                    window.location.href = "gallery.html";
                 }, 2000);
             }
         });
 
-        // Helper function to create Bootstrap alerts
         function showAlert(message, type) {
             const wrapper = document.createElement('div');
             wrapper.innerHTML = [
